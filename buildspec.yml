@@ -7,14 +7,16 @@ phases:
 
   pre_build:
     commands:
+      - echo Running tests
       - sudo yum update -y
-      - sudo dnf module install nodejs:14
       - sudo yum install nodejs
       - npm install
 
   build:
     commands:
-      - node server.js
+      - echo Building for production
+      - rm -rf node_modules
+      - npm install --production
 
 artifacts:
   files:

@@ -8,7 +8,7 @@ phases:
   pre_build:
     commands:
       - sudo yum update -y
-      - sudo yum install curl
+      - sudo dnf module install nodejs:14
       - sudo yum install nodejs
       - npm install
 

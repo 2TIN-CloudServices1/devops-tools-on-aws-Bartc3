@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 16
+      nodejs: 14
 
   pre_build:
     commands:
@@ -13,9 +13,7 @@ phases:
 
   build:
     commands:
-      - echo Building for production
-      - rm -rf node_modules
-      - npm install --production
+      - node server.js
 
 artifacts:
   files:

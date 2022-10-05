@@ -7,7 +7,7 @@ phases:
 
   pre_build:
     commands:
-      - yum update
+      - sudo apt-get update
       - curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
       - npm install
       - npm test
